@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -9,7 +9,10 @@
 </head>
 
 <body>
-<h2>Here are some people</h2>
+Here are some people:
+<ol>
+    <li th:each="person : ${people}" th:text="${person}">My Junk Person</li>
+</ol>
 </body>
 
 </html>
